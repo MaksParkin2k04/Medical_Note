@@ -1,6 +1,7 @@
 package com.example.medical_note;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+
 
     public void Save_Button(View view) {
         TextView textView = findViewById(R.id.Save_View);
