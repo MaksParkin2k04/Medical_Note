@@ -13,11 +13,11 @@ public class Measurement {
     public int uid;
 
     @ColumnInfo(name = "sistal")
-    public static int sistal;
+    public  int sistal;
     @ColumnInfo(name = "diostal")
-    public static int diostal;
+    public  int diostal;
     @ColumnInfo(name = "pulse")
-    public static int pulse;
+    public  int pulse;
 
 
 

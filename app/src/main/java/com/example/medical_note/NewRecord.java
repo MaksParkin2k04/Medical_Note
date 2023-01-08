@@ -20,7 +20,7 @@ public class NewRecord extends AppCompatActivity {
         final EditText numberSistal = findViewById(R.id.editNumber_Sistal);
         final EditText numberDiastal = findViewById(R.id.editNumber_Diastal);
         final EditText numberPulse = findViewById(R.id.editNumber_Puls);
-        final Button newRecordButton = findViewById(R.id.saveButton);
+        final Button newRecordButton = findViewById(R.id.addNewUserButton);
         newRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,9 +33,9 @@ public class NewRecord extends AppCompatActivity {
     private void saveNewRecord(int numberSistal, int numberDiastal, int numberPulse ) {
         AppDataBase dataBase = AppDataBase.getDbInstance(this.getApplicationContext());
         Measurement measurement = new Measurement();
-        Measurement.sistal = numberSistal;
-        Measurement.diostal = numberDiastal;
-        Measurement.pulse = numberPulse;
+        measurement.sistal = numberSistal;
+        measurement.diostal = numberDiastal;
+        measurement.pulse = numberPulse;
         dataBase.measurementDao().insertMeasurement();
 
         finish();
