@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         newRecordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivityForResult(new Intent(MainActivity.this, NewRecord.class), 100);
+                startActivityForResult(new Intent(MainActivity.this, NewRecord.class), 1);
             }
         });
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == 100) {
+        if (requestCode == 1) {
                 loadMeasurementList();
         }
 
